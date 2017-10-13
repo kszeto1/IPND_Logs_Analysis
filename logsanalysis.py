@@ -2,12 +2,19 @@ import psycopg2
 
 # Connect to database named 'news'
 
+
+DB_NAME = "news"
+
 def fetch_results(query):
-    db = psycopg2.connect("news")
+    # Connects to the database, "news"
+    db = psycopg2.connect("dbname = news")
+    # Cursor executes queries and fetches results
     c = db.cursor()
+    # Execute input query from cursor
     c.execute(query)
+    # fetch results from cursor
     results = c.fetchall()
-    print results
+    return results
     c.close()
 
 """CREATE VIEW most_viewed_articles as
@@ -52,10 +59,14 @@ def fetch_results(query):
 def most_viewed():
     """What are the most popular three articles of all time?"""
     print "The three most popular articles of all time:"
+    print '\n'
+    # import pdb
+    # pdb.set_trace()
     query1 = "SELECT * FROM most_viewed_articles limit 3;"
-    import pdb
-    pdb.set_trace()
-    fetch_results(query1)
+    most_viewed_results = fetch_results(query1)
+    for line in most_viewed_results:
+        print ('"' + str(line[0]) + '"' + ' - ' + str(line[1]) + ' views')
+    print '\n'
 
 def most_popular_author():
     """Who are the most popular article authors of all time?"""
