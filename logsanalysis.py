@@ -26,7 +26,26 @@ def fetch_results(query):
         GROUP BY authors.name
         ORDER BY author_views desc;
         
-    CREATE VIEW """
+    CREATE VIEW errors_per_day as
+    SELECT to_char(log.time, 'FMMonth DD, YYYY') "day", count(log.status) as errors
+        FROM log
+        WHERE status = '404 NOT FOUND'
+        GROUP BY 1
+        ORDER BY 1;
+        
+    CREATE VIEW requests_per_day as
+    SELECT to_char(log.time, 'FMMonth DD, YYYY') "day", count(log.status) as requests
+        FROM log
+        GROUP BY 1
+        ORDER BY 1;
+        
+    CREATE VIEW day_with_most_errors as
+    SELECT errors_per_day.day, concat(ROUND((100.0 * errors_per_day.errors / requests_per_day.requests), 2), '%')as percent_errors
+        FROM errors_per_day, requests_per_day
+        WHERE errors_per_day.day = requests_per_day.day 
+        AND (((100.0 * errors_per_day.errors / requests_per_day.requests)) > 1)
+        ORDER BY percent_errors desc; 
+        """
 
 
 
