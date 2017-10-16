@@ -57,11 +57,7 @@ def fetch_results(query):
 
 
 def most_viewed():
-    """What are the most popular three articles of all time?"""
-    print "The three most popular articles of all time:"
-    print '\n'
-    # import pdb
-    # pdb.set_trace()
+    print "What are the most popular three articles of all time?" + '\n'
     query1 = "SELECT * FROM most_viewed_articles limit 3;"
     most_viewed_results = fetch_results(query1)
     for line in most_viewed_results:
@@ -69,9 +65,21 @@ def most_viewed():
     print '\n'
 
 def most_popular_author():
-    """Who are the most popular article authors of all time?"""
+    print "Who are the most popular article authors of all time?" + '\n'
+    query2 = "SELECT * FROM most_popular_author;"
+    most_popular_results = fetch_results(query2)
+    for line in most_popular_results:
+        print ('"' + str(line[0]) + '"' + ' - ' + str(line[1]) + ' views')
+    print '\n'
 
 def most_error_day():
     """On which days did more than 1% of requests lead to errors?"""
+    print "On which days did more than 1% of requests lead to errors?" + '\n'
+    query3 = "SELECT * FROM day_with_most_errors;"
+    error_results = fetch_results(query3)
+    print (str(error_results[0][0]) + ' -- ' + str(error_results[0][1]) + ' errors')
+    print '\n'
 
 most_viewed()
+most_popular_author()
+most_error_day()
