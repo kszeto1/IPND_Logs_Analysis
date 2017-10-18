@@ -93,7 +93,7 @@ Logsanalysis.py executes SQL queries using the database file (newsdata.sql) and 
 * [https://www.postgresql.org/docs/9.5/static/functions-formatting.html]("https://www.postgresql.org/docs/9.5/static/functions-formatting.html")
 * [https://www.postgresql.org/docs/9.6/static/functions-formatting.html]("https://www.postgresql.org/docs/9.6/static/functions-formatting.html")
 * [https://pyformat.info/#simple]("https://pyformat.info/#simple")
-* [Udacity Updating Away Spam]("https://classroom.udacity.com/nanodegrees/nd000/parts/b910112d-b5c0-4bfe-adca-6425b137ed12/modules/a3a0987f-fc76-4d14-a759-b2652d06ab2b/lessons/477edebf-b8f6-4eab-88bb-0456c9084bc5/concepts/34857286320923")
+
 
 
 
