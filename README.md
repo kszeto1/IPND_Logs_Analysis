@@ -11,14 +11,14 @@ The reporting tool should answer the 3 following questions:
 > 3. On which days did more than 1% of requests lead to errors?
 
 ## Installation
-1. Start by [installing VirtualBox]("https://www.virtualbox.org/wiki/Downloads"). Virtualbox is the software used 
+1. Start by [installing VirtualBox](https://www.virtualbox.org/wiki/Downloads). Virtualbox is the software used 
 specifically for running the virtual machine. Vagrant, in the following step 2, will run launch Virtualfox after
 installing. 
 
-2. [Install vagrant]("https://www.vagrantup.com/downloads.html"), the software that configures the virtual machine(VM)
+2. [Install vagrant](https://www.vagrantup.com/downloads.html), the software that configures the virtual machine(VM)
 and enables you to share files between your host computer and VM's filesystem.
 
-3. [Download the VM configuration]("https://d17h27t6h515a5.cloudfront.net/topher/2017/August/59822701_fsnd-virtual-machine/fsnd-virtual-machine.zip").
+3. [Download the VM configuration](https://d17h27t6h515a5.cloudfront.net/topher/2017/August/59822701_fsnd-virtual-machine/fsnd-virtual-machine.zip).
 This directory contains the VM files. After downloading it, change to this directory using your terminal with the 
 **```cd```** command. Then change to the vagrant directory inside FSND-Virtual-Machine.
 
@@ -87,12 +87,12 @@ Logsanalysis.py executes SQL queries using the database file (newsdata.sql) and 
 
 ## References
 
-* [https://discussions.udacity.com/t/log-analysis-nothing-is-working/249753/7?u=kszeto]("https://discussions.udacity.com/t/log-analysis-nothing-is-working/249753/7?u=kszeto")
-* [https://www.postgresql.org/docs/8.1/static/functions-math.html]("https://www.postgresql.org/docs/8.1/static/functions-math.html")
-* [https://www.postgresql.org/docs/9.1/static/functions-formatting.html]("https://www.postgresql.org/docs/9.1/static/functions-formatting.html")
-* [https://www.postgresql.org/docs/9.5/static/functions-formatting.html]("https://www.postgresql.org/docs/9.5/static/functions-formatting.html")
-* [https://www.postgresql.org/docs/9.6/static/functions-formatting.html]("https://www.postgresql.org/docs/9.6/static/functions-formatting.html")
-* [https://pyformat.info/#simple]("https://pyformat.info/#simple")
+* [https://discussions.udacity.com/t/log-analysis-nothing-is-working/249753/7?u=kszeto](https://discussions.udacity.com/t/log-analysis-nothing-is-working/249753/7?u=kszeto)
+* [https://www.postgresql.org/docs/8.1/static/functions-math.html](https://www.postgresql.org/docs/8.1/static/functions-math.html)
+* [https://www.postgresql.org/docs/9.1/static/functions-formatting.html](https://www.postgresql.org/docs/9.1/static/functions-formatting.html)
+* [https://www.postgresql.org/docs/9.5/static/functions-formatting.html](https://www.postgresql.org/docs/9.5/static/functions-formatting.html)
+* [https://www.postgresql.org/docs/9.6/static/functions-formatting.html](https://www.postgresql.org/docs/9.6/static/functions-formatting.html)
+* [https://pyformat.info/#simple](https://pyformat.info/#simple)
 
 
 
