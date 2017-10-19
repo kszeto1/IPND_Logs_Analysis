@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import psycopg2
+import sys
 
 # Connect to database named 'news'
 
@@ -7,17 +8,28 @@ import psycopg2
 DB_NAME = "news"
 
 
-def fetch_results(query):
+def connect(database_name):
     # Connects to the database, "news"
-    db = psycopg2.connect("dbname = news")
-    # Cursor executes queries and fetches results
-    c = db.cursor()
-    # Execute input query from cursor
+    try:
+        db = psycopg2.connect("dbname={}".format(database_name))
+        # Cursor executes queries and fetches results
+        c = db.cursor()
+        # Execute input query from cursor
+        return db, c
+    except psycopg2.Error as e:
+        print "Unable to connect to database"
+        # Then exit the program
+        sys.exit(1)     # Easier method of exiting. exit(1) means error/problem
+        raise e
+
+
+def fetch_results(query):
+    db, c = connect(DB_NAME)
     c.execute(query)
     # fetch results from cursor
     results = c.fetchall()
-    return results
     c.close()
+    return results
 
 
 def most_viewed():
@@ -48,6 +60,7 @@ def most_error_day():
     print '\n'
 
 
-most_viewed()
-most_popular_author()
-most_error_day()
+if __name__ == '__main__':
+    most_viewed()
+    most_popular_author()
+    most_error_day()
