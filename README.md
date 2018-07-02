@@ -12,8 +12,7 @@ The reporting tool should answer the 3 following questions:
 
 ## Installation
 1. Start by [installing VirtualBox](https://www.virtualbox.org/wiki/Downloads). Virtualbox is the software used 
-specifically for running the virtual machine. Vagrant, in the following step 2, will run launch Virtualfox after
-installing. 
+specifically for running the virtual machine. Vagrant, in the next step, will run VirtualBox after installing. 
 
 2. [Install vagrant](https://www.vagrantup.com/downloads.html), the software that configures the virtual machine(VM)
 and enables you to share files between your host computer and VM's filesystem.
